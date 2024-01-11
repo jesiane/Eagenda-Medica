@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" routerLink="/"
+      >e-Agenda Médica<i class="bi bi-heart-pulse-fill text-success ms-2"></i
+    ></a>
+    <button
+      (click)="estaColapsada = !estaColapsada"
+      class="navbar-toggler"
+      type="button"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngbCollapse]="estaColapsada == true">
+      <div class="links w-100 text-center">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link text-success"
+              routerLinkActive="fw-semibold"
+              routerLink="/medicos/listar"
+              >Médicos</a
+            >
+            <li class="nav-item">
+              <a
+                class="nav-link text-success"
+                routerLinkActive="fw-semibold"
+                routerLink="/consultas/listar"
+                >Consultas </a
+              >           
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-success"
+              routerLinkActive="fw-semibold"
+              routerLink="/cirurgias/listar"
+              >Cirurgias</a
+            >       
+          </li>
+          <li class="nav-item ms-auto">
+            <button (click)="sair()" class="btn btn-success px-5">
+              Sair
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

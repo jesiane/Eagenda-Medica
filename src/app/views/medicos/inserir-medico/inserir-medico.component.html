@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="card border-success mb-3">
+    <div class="row align-items-center gy-3 p-3">
+      <div class="col-12 col-md-10 col-lg-6 mx-auto mt-5">
+        <div class="text-md-start">
+          <h1 class="fw-bold text-success">Novo Médico</h1>
+        </div>
+  
+        <form [formGroup]="form" (ngSubmit)="gravar()" class="mt-4">
+          <div class="form-group mb-3 position-relative">
+            <label class="form-label">Nome:</label>
+            <input
+              formControlName="nome"
+              class="form-control"
+              type="text"
+              placeholder="Digite o nome do médico"
+            />
+          </div>
+  
+          <div class="form-group mb-3 position-relative">
+            <label class="form-label">CRM:</label>
+            <input
+              formControlName="crm"
+              class="form-control"
+              type="text"
+              placeholder="Digite o CRM do médico"
+            />
+          </div>
+  
+          <div class="form-group mb-3 position-relative">
+            <label class="form-label">Especialidade:</label>
+            <input
+              formControlName="especialidade"
+              class="form-control"
+              type="text"
+              placeholder="Digite a especialidade do médico"
+            />
+          </div>
+  
+          <div class="form-group mb-3 position-relative">
+            <label class="form-label">Email:</label>
+            <input
+              formControlName="email"
+              class="form-control"
+              type="text"
+              placeholder="Digite o email do médico"
+            />
+          </div>
+  
+          <div class="form-group mb-3 position-relative">
+            <label class="form-label">Telefone:</label>
+            <input
+              formControlName="telefone"
+              class="form-control"
+              type="text"
+              placeholder="Digite o telefone do médico"
+            />
+          </div>
+  
+          <div class="card-footer g-grid d-flex gap-1 mt-5">
+            <button type="submit" class="btn btn-success px-5">
+              <i class="bi bi-save me-2"></i>
+              Gravar
+            </button>
+            <button
+              routerLink="/medico/listar"
+              type="button"
+              class="btn btn-outline-success px-5"
+            >
+              <i class="pi pi-arrow-left me-2"></i>
+              Voltar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</div>
