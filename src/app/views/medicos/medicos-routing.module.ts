@@ -37,7 +37,7 @@ const routes: Routes = [
   {
     path: 'listar',
     component: ListarMedicoComponent,
-    resolve: { medicos: ListarMedicosResolver },
+    resolve: { medico: ListarMedicosResolver },
   },
   {
     path: 'inserir',
@@ -46,7 +46,7 @@ const routes: Routes = [
   {
     path: 'editar/:id',
     component: EditarMedicoComponent,
-    resolve: { medicos: formsMedicoResolver },
+    resolve: { medico: formsMedicoResolver },
   },
   {
     path: 'excluir/:id',

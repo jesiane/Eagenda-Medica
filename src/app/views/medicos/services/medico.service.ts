@@ -10,7 +10,7 @@ import { VisualizarMedicoViewModel } from "../models/Visualizar-medico.view-mode
 export class MedicosService{
   private endpoint: string = ''; //aula 151 video 4
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient    ){}
 
   public inserir(medico: FormsMedicoViewModel): Observable<FormsMedicoViewModel>{
     return this.http.post<any>(this.endpoint, medico, this.obterHeadersAutorizacao());

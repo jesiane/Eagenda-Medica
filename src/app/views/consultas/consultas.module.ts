@@ -22,7 +22,7 @@ import { ConsultasRoutingModule } from "./consulta-routing.module";
   imports: [
     CommonModule, 
     ReactiveFormsModule, 
-   ConsultasRoutingModule],
+    ConsultasRoutingModule],
   providers: [
    ConsultasService
   ]
