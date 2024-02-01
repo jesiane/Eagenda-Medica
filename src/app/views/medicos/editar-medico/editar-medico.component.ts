@@ -16,7 +16,7 @@ export class EditarMedicoComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private medicoService: MedicosService,
+   // private medicoService: MedicosService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
@@ -34,21 +34,21 @@ export class EditarMedicoComponent {
 
     if (!this.idSelecionado) return;
 
-    this.medicoService.selecionarPorId(this.idSelecionado).subscribe((res) => {
-      this.form.patchValue(res);
-    });
+    //this.medicoService.selecionarPorId(this.idSelecionado).subscribe((res) => {
+     // this.form.patchValue(res);
+   // });
   }
 
   gravar() {
-    this.medicoVM = this.form.value;
+   // this.medicoVM = this.form.value;
 
-    this.medicoService
-      .editar(this.idSelecionado!, this.medicoVM)
-      .subscribe((res) => {
-        console.log(res);
+   // this.medicoService
+    //  .editar(this.idSelecionado!, this.medicoVM)
+    //  .subscribe((res) => {
+    //    console.log(res);
 
-        this.router.navigate(['/medico/listar']);
-      });
+   //     this.router.navigate(['/medico/listar']);
+  //    });
   }
 }
 

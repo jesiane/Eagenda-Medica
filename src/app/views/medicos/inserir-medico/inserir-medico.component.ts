@@ -13,7 +13,9 @@ export class InserirMedicoComponent implements OnInit{
   form!: FormGroup;
   medicoVM!: FormsMedicoViewModel;
 
-  constructor(private formBuilder: FormBuilder, private medicoService: MedicosService, private router: Router ) {}
+  constructor(private formBuilder: FormBuilder, 
+    //private medicoService: MedicosService, 
+    private router: Router ) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -26,12 +28,10 @@ export class InserirMedicoComponent implements OnInit{
   }
   
   gravar() {
-    this.medicoVM = this.form.value;
-
-    this.medicoService.inserir(this.medicoVM).subscribe((res) => {
-      console.log(res);
-
-      this.router.navigate(['/dashboard']);
-    });
+  //  this.medicoVM = this.form.value;
+   // this.medicoService.inserir(this.medicoVM).subscribe((res) => {
+    //  console.log(res);
+   //   this.router.navigate(['/dashboard']);
+  //  });
   }
 }
